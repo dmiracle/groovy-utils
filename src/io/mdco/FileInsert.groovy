@@ -14,9 +14,11 @@ package io.mdco
 class FileInsert {
     static void main(String[] args) {
         def list = []
-        def PATH = './'
-        if(args.length > 1) {
-            PATH = args[1]
+        def PATH = ''
+        
+        if(args.length == 1) {
+            PATH = args[0]
+            println PATH
         }
         def dir = new File(PATH)
         dir.eachFile() { file->
