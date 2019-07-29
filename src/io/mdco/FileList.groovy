@@ -21,11 +21,8 @@ class FileInsert {
             println PATH
         }
         def dir = new File(PATH)
-        dir.eachFileRecurse() { file->
-            if (file.name='docker-compose.yml')
-            {
-                println file.getAbsolutePath()
-            }
+        dir.eachFile() { file->
+            println file.getAbsolutePath()
         }
     }
 }
