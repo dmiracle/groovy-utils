@@ -1,4 +1,6 @@
 package io.mdco
+import java.io.File
+
 // loop through files in the dir
 
 // parse each name to get
@@ -22,7 +24,7 @@ class FileInsert {
         }
         def dir = new File(PATH)
         dir.eachFileRecurse() { file->
-            if (file.name='docker-compose.yml')
+            if (file.name=='docker-compose.yml')
             {
                 println file.getAbsolutePath()
             }
